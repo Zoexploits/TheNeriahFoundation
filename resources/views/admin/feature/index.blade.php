@@ -6,8 +6,8 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header d-flex justify-content-between">
-            <h1>Sliders</h1>
-            <a href="{{ route('admin_slider_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</a>
+            <h1>Features</h1>
+            <a href="{{ route('admin_feature_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</a>
         </div>
         <div class="section-body">
             <div class="row">
@@ -19,24 +19,23 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>Photo</th>
+                                            <th>Icon</th>
                                             <th>Heading</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($sliders as $slider  )
+                                        @foreach ($features as $feature)
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>
-                                                    <img src="{{ asset('uploads/'.
-                                                    $slider->slider_photo) }}" class="w_200">
+                                                    <i class="{{$feature->icon}}"></i>
                                                 </td>
-                                                <td>{{$slider->heading}}</td>
+                                                <td>{{$feature->heading}}</td>
                                                 <td class="pt_10 pb_10">
-                                                    <a href="{{route('admin_slider_edit',$slider->id)}}" class="btn btn-sm btn-primary" ><i class="fas
+                                                    <a href="{{route('admin_feature_edit',$slider->id)}}" class="btn btn-sm btn-primary" ><i class="fas
                                                         fa-edit"></i></a>
-                                                        <a href="{{route('admin_slider_delete',$slider->id)}}" class="btn btn bg-danger btn-sm" onclick="return
+                                                        <a href="{{route('admin_feature_delete',$slider->id)}}" class="btn btn bg-danger btn-sm" onclick="return
                                                         confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
                                                         </td>
                                             </tr>

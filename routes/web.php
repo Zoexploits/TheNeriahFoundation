@@ -7,6 +7,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminSliderController;
+use App\Http\Controllers\Admin\AdminFeatureController;
+use App\Http\Controllers\Admin\AdminSpecialController;
 use App\Http\Controllers\Admin\AdminTestimonialController;
 
 
@@ -43,8 +45,20 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/slider/index', [AdminSliderController::class, 'index'])->name('admin_slider_index');
     Route::get('/slider/create', [AdminSliderController::class, 'create'])->name('admin_slider_create');
     Route::post('/slider/create-store', [AdminSliderController::class, 'create_submit'])->name('admin_slider_create_submit');
-    Route::get('/slider/edit/{}', [AdminSliderController::class, 'edit'])->name('admin_slider_edit');
+    Route::get('/slider/edit/{id}', [AdminSliderController::class, 'edit'])->name('admin_slider_edit');
+    Route::post('/slider/edit/submit/{id}', [AdminSliderController::class, 'edit_submit'])->name('admin_slider_edit_submit');
+    Route::get('/slider/delete/{id}', [AdminSliderController::class, 'delete'])->name('admin_slider_delete');
 
+    Route::get('/special/edit/', [AdminSpecialController::class, 'edit'])->name('admin_special_edit');
+    Route::post('/special/edit/submit', [AdminSpecialController::class, 'edit_submit'])->name('admin_special_edit_submit');
+
+
+    Route::get('/feature/index', [AdminFeatureController::class, 'index'])->name('admin_feature_index');
+    Route::get('/feature/create', [AdminFeatureController::class, 'create'])->name('admin_feature_create');
+    Route::post('/feature/create/submit', [AdminFeatureController::class, 'create_submit'])->name('admin_feature_create_submit');
+    Route::get('/feature/edit/{id}', [AdminFeatureController::class, 'edit'])->name('admin_feature_edit');
+    Route::post('/feature/edit/submit/{id}', [AdminFeatureController::class, 'edit_submit'])->name('admin_feature_edit_submit');
+    Route::get('/feature/delete/{id}', [AdminFeatureController::class, 'delete'])->name('admin_feature_delete');
 });
 
 Route::prefix('admin')->group(function () {

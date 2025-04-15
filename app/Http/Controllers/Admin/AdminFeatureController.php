@@ -83,7 +83,7 @@ class AdminSliderController extends Controller
         $slider = Slider::findOrFail($id);
         unlink(public_path('uploads/'.$slider->photo));
         $slider->delete();
-        
+
         return redirect()->back()->with('success', 'Slider deleted successfully.');
     }
 }

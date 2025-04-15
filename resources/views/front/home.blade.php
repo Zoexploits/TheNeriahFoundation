@@ -3,7 +3,9 @@
 @section('main_content')
 <div class="slider">
     <div class="slide-carousel owl-carousel">
-        <div class="item" style="background-image:url(uploads/slide-1.jpg);">
+
+        @foreach ($sliders as $slider )
+        <div class="item" style="background-image:url({{asset('uploads/'.$slider->photo)}});">
             <div class="bg"></div>
             <div class="text">
                 <div class="container">
@@ -11,12 +13,10 @@
                         <div class="col-lg-6">
                             <div class="text-wrapper">
                                 <div class="text-content">
-                                    <h2>Help the Child <br>in need</h2>
-                                    <p>
-                                        We should support kids who are having a tough time. It's about being kind and giving a hand to children facing problems like being poor, sick, or in trouble. When we help, we show them that they're not alone and that things can get better. 
-                                    </p>
+                                    <h2>{{$slider->heading}}</h2>
+                                    <p> {!! $slider->text !!} </p>
                                     <div class="button-style-1 mt_20">
-                                        <a href="">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        <a href="{{$slider->button_link}}">{{$slider->button_text}}<i class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -25,32 +25,12 @@
                 </div>
             </div>
         </div>
-        <div class="item" style="background-image:url(uploads/slide-2.jpg);">
-            <div class="bg"></div>
-            <div class="text">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="text-wrapper">
-                                <div class="text-content">
-                                    <h2>Fight for right <br>causes</h2>
-                                    <p>
-                                        We work hard to support and raise awareness for important issues that need attention and action. Our goal is to make the world a better place by advocating for justice, equality, and positive change. Your support and involvement can help a lot.
-                                    </p>
-                                    <div class="button-style-1">
-                                        <a href="">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
+
     </div>
 </div>
 
-
+@if($special->status == 'show')
 <div class="special pt_70 pb_70">
     <div class="container">
         <div class="row">
@@ -60,23 +40,19 @@
                         <div class="col-md-6">
                             <div class="left-side">
                                 <div class="inner">
-                                    <h2>Our Mission</h2>
-                                    <h3>What We Do</h3>
-                                    <p>
-                                        At our charity, we are committed to making a positive impact in the lives of those in need. We provide vital support in areas such as education, healthcare, disaster relief, and addressing hunger and homelessness. We collaborate with local partners and volunteers to directly help individuals and families.
-                                    </p>
-                                    <p>
-                                        We also focus on raising awareness about critical social and environmental issues. Our efforts include campaigns, events, and partnerships with like-minded organizations to promote awareness and advocate for change. Join us in making the world a better place through fundraising, volunteering, or simply spreading the word. Together, we can be a force for good and contribute to a more compassionate and equitable society.
-                                    </p>
+                                    <h2>{{$special->sub_heading}}</h2>
+                                    <h3>{{$special->heading}}</h3>
+                                    {!! $special->text !!}
                                     <div class="button-style-1 mt_20">
-                                        <a href="">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
+                                        <a href="{{$special->button_link}}">{{$special->button_text}}<i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
                         <div class="col-md-6">
-                            <div class="right-side" style="background-image: url(uploads/about-1.jpg);">
-                                <a class="video-button" href="https://www.youtube.com/watch?v=TklWRCSM4SA"><span></span></a>
+                            <div class="right-side" style="background-image: url('{{ asset('uploads/'.$special->photo)}}');">
+                                <a class="video-button" href="https://www.youtube.com/watch?v={{$special->video_id}}"><span></span></a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +61,7 @@
         </div>
     </div>
 </div>
-
+@endif
 
 <div class="cause pt_70">
     <div class="container">
