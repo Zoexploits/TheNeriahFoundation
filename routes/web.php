@@ -6,7 +6,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Admin\AdminSliderController;
+use App\Http\Controllers\Admin\AdminCounterController;
 use App\Http\Controllers\Admin\AdminFeatureController;
 use App\Http\Controllers\Admin\AdminSpecialController;
 use App\Http\Controllers\Admin\AdminTestimonialController;
@@ -19,6 +21,7 @@ require __DIR__.'/auth.php';
 
 /*FRONT*/
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about/', [AboutController::class, 'index'])->name('about');
 
 
 /* User */
@@ -51,6 +54,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 
     Route::get('/special/edit/', [AdminSpecialController::class, 'edit'])->name('admin_special_edit');
     Route::post('/special/edit/submit', [AdminSpecialController::class, 'edit_submit'])->name('admin_special_edit_submit');
+
+
+    Route::get('/counter/edit/', [AdminCounterController::class, 'edit'])->name('admin_counter_edit');
+    Route::post('/counter/edit/submit', [AdminCounterController::class, 'edit_submit'])->name('admin_counter_edit_submit');
 
 
     Route::get('/feature/index', [AdminFeatureController::class, 'index'])->name('admin_feature_index');

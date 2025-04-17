@@ -5,18 +5,32 @@
     <div class="slide-carousel owl-carousel">
 
         @foreach ($sliders as $slider )
-        <div class="item" style="background-image:url({{asset('uploads/'.$slider->photo)}});">
-            <div class="bg"></div>
-            <div class="text">
+        <div class="item" style="background-image:url({{ asset('uploads/'.$slider->photo) }}); height: 70vh; position: relative; background-size: cover; background-position: center;">
+
+            <!-- Overlay -->
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            "></div>
+
+            <div class="text" style="position: relative; z-index: 2; color: white;">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="text-wrapper">
                                 <div class="text-content">
-                                    <h2>{{$slider->heading}}</h2>
-                                    <p> {!! $slider->text !!} </p>
+                                    <h2>{{ $slider->heading }}</h2>
+                                    <p>{!! $slider->text !!}</p>
                                     <div class="button-style-1 mt_20">
-                                        <a href="{{$slider->button_link}}">{{$slider->button_text}}<i class="fas fa-long-arrow-alt-right"></i></a>
+                                        <a href="{{ $slider->button_link }}" style="color: white;">
+                                            {{ $slider->button_text }}
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -26,6 +40,10 @@
             </div>
         </div>
         @endforeach
+
+    </div>
+</div>
+
 
     </div>
 </div>

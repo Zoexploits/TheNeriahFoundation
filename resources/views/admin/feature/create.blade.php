@@ -18,15 +18,19 @@
                                 <form action="{{route('admin_feature_create_submit')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3"></div>
+                                        <label for="">Icon</label>
+                                        <input type="text" class="form-control" name="icon" >
+                                    </div>
+                                    <div class="form-group mb-3"></div>
                                         <label for="">Heading</label>
                                         <input type="text" class="form-control" name="heading" >
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="">Text</label>
-                                        <textarea name="text" id="" cols="30" rows="10" class="form-control editor"></textarea>
+                                        <textarea name="text" id="" cols="30" rows="10" class="form-control h_100"></textarea>
                                     </div>
-                                   
+
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>

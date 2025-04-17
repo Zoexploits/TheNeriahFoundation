@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Slider;
+use App\Models\Feature;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class AdminSliderController extends Controller
+class AdminFeatureController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::all();
-        return view('admin.slider.index', compact('sliders'));
+        $features = Feature::all();
+        return view('admin.feature.index', compact('features'));
     }
 
     public function create()
     {
-        return view('admin.slider.create');
+        return view('admin.feature.create');
     }
 
     public function create_submit(Request $request)
@@ -24,21 +25,19 @@ class AdminSliderController extends Controller
         $request->validate([
             'heading' => 'required',
             'text' => 'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'icon' => 'required',
         ]);
 
-        $slider = new Slider();
-        $slider->heading = $request->heading;
-        $slider->text = $request->text;
-        $slider->button_text = $request->button_text;
-        $slider->button_link = $request->button_link;
-        $final_name = time().'.'.$request->photo->extension();
-        $request->photo->move(public_path('uploads'), $final_name);
-        $slider->photo = $final_name;
-        $slider->save();
-        return redirect()->back()->with('success', 'Slider created successfully.');
+        $feature = new Feature();
+        $feature->heading = $request->heading;
+        $feature->text = $request->text;
+        $feature->icon = $request->icon;
 
 
+        $feature->save();
+
+
+        return redirect()->route('admin_feature_index')->with('success', 'Feature created successfully.');
     }
 
     public function edit($id)
@@ -52,6 +51,7 @@ class AdminSliderController extends Controller
         $request->validate([
             'heading' => 'required',
             'text' => 'required',
+            'icon' => 'required',
         ]);
 
         $slider = Slider::findOrFail($id);

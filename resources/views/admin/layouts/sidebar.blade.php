@@ -18,6 +18,9 @@
 
             <li class="{{ Request::is('admin/feature/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_feature_index') }}"><i class="fas fa-hand-point-right"></i> <span>Features</span></a></li>
 
+            <li class="{{ Request::is('admin/counter/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_counter_edit') }}"><i class="fas fa-hand-point-right"></i> <span>Counter</span></a></li>
+
+
             {{-- <li class="{{ Request::is('admin/testimonial/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_testimonial_index') }}"><i class="fas fa-hand-point-right"></i> <span>Testimonials</span></a></li> --}}
 
 

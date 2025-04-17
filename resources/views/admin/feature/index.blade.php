@@ -27,9 +27,9 @@
                                     <tbody>
                                         @foreach ($features as $feature)
                                             <tr>
-                                                <td>{{$loop->iteration}}</td>
+                                                <td>{{$loop->iteration}}</td>l
                                                 <td>
-                                                    <i class="{{$feature->icon}}"></i>
+                                                    <i class="{{$feature->icon}}" style="font-size:30px"></i>
                                                 </td>
                                                 <td>{{$feature->heading}}</td>
                                                 <td class="pt_10 pb_10">
