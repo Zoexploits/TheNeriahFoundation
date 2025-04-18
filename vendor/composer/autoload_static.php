@@ -19,15 +19,15 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
@@ -37,6 +37,7 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        'bab4ed692c1fd3872849227e2a85791e' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Support/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -48,6 +49,10 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         array (
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
+        ),
+        'U' => 
+        array (
+            'Unicodeveloper\\Paystack\\' => 24,
         ),
         'T' => 
         array (
@@ -190,6 +195,10 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Unicodeveloper\\Paystack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -530,7 +539,13 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Admin\\AdminCauseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminCauseController.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\AdminCounterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminCounterController.php',
+        'App\\Http\\Controllers\\Admin\\AdminFaqController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminFaqController.php',
+        'App\\Http\\Controllers\\Admin\\AdminFeatureController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminFeatureController.php',
+        'App\\Http\\Controllers\\Admin\\AdminSliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminSliderController.php',
+        'App\\Http\\Controllers\\Admin\\AdminSpecialController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminSpecialController.php',
         'App\\Http\\Controllers\\Admin\\AdminTestimonialController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminTestimonialController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
@@ -542,6 +557,9 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Front\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Front/AboutController.php',
+        'App\\Http\\Controllers\\Front\\CauseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Front/CauseController.php',
+        'App\\Http\\Controllers\\Front\\FaqController' => __DIR__ . '/../..' . '/app/Http/Controllers/Front/FaqController.php',
         'App\\Http\\Controllers\\Front\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Front/HomeController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\User\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/User/UserController.php',
@@ -560,6 +578,13 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Mail\\Websitemail' => __DIR__ . '/../..' . '/app/Mail/Websitemail.php',
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
+        'App\\Models\\Cause' => __DIR__ . '/../..' . '/app/Models/Cause.php',
+        'App\\Models\\Counter' => __DIR__ . '/../..' . '/app/Models/Counter.php',
+        'App\\Models\\Donation' => __DIR__ . '/../..' . '/app/Models/Donation.php',
+        'App\\Models\\Faq' => __DIR__ . '/../..' . '/app/Models/Faq.php',
+        'App\\Models\\Feature' => __DIR__ . '/../..' . '/app/Models/Feature.php',
+        'App\\Models\\Slider' => __DIR__ . '/../..' . '/app/Models/Slider.php',
+        'App\\Models\\Special' => __DIR__ . '/../..' . '/app/Models/Special.php',
         'App\\Models\\Testimonial' => __DIR__ . '/../..' . '/app/Models/Testimonial.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -6486,6 +6511,12 @@ class ComposerStaticInit868f030360c09e6682aff7e143aef381
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'Unicodeveloper\\Paystack\\Exceptions\\IsNullException' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Exceptions/IsNullException.php',
+        'Unicodeveloper\\Paystack\\Exceptions\\PaymentVerificationFailedException' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Exceptions/PaymentVerificationFailedException.php',
+        'Unicodeveloper\\Paystack\\Facades\\Paystack' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Facades/Paystack.php',
+        'Unicodeveloper\\Paystack\\Paystack' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Paystack.php',
+        'Unicodeveloper\\Paystack\\PaystackServiceProvider' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/PaystackServiceProvider.php',
+        'Unicodeveloper\\Paystack\\TransRef' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/TransRef.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',

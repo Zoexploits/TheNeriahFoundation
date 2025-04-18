@@ -18,6 +18,7 @@ class AboutController extends Controller
     public function index()
     {
         $sliders =Slider::get();
+        $features = Feature::get();
         $counter = Counter::where('id', 1)->first();
         $special = Special::where('id', 1)->first();
 

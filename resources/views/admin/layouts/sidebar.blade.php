@@ -20,6 +20,11 @@
 
             <li class="{{ Request::is('admin/counter/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_counter_edit') }}"><i class="fas fa-hand-point-right"></i> <span>Counter</span></a></li>
 
+            <li class="{{ Request::is('admin/faq/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_faq_index') }}"><i class="fas fa-hand-point-right"></i> <span>FAQs</span></a></li>
+
+
+            <li class="{{ Request::is('admin/cause/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_cause_index') }}"><i class="fas fa-hand-point-right"></i> <span>Cause</span></a></li>
+
 
             {{-- <li class="{{ Request::is('admin/testimonial/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_testimonial_index') }}"><i class="fas fa-hand-point-right"></i> <span>Testimonials</span></a></li> --}}
 

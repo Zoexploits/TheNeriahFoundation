@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '935b75b3e479b41ed53c16c10f46e99b0f95fd91',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -380,9 +380,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '935b75b3e479b41ed53c16c10f46e99b0f95fd91',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -757,8 +757,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -1277,6 +1277,15 @@
             'reference' => 'c42125b83a4fa63b187fdf29f9c93cb7733da30c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../tijsverkoyen/css-to-inline-styles',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'unicodeveloper/laravel-paystack' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '4d540e081f63f8ceca42ded5668da8ec93a3a084',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../unicodeveloper/laravel-paystack',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
